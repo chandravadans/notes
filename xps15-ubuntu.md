@@ -7,7 +7,7 @@ Installing ubuntu 16.04.3 on Dell XPS 15-9560
 * Core i7-7700HQ
 * Nvidia 1050, 4GB
 
-## Running the live usb
+## 1. Running the live usb
 
 * Burn iso image to pendrive (Rufus on Win, dd on another linux)
 * Boot, and if you get a problem about cpu#x being softblocked then at the grub command line (Try Ubuntu without installing -> 'o')
@@ -17,7 +17,7 @@ append this to the line that starts with 'linux':
 nouveau.modeset=0
 ```
 
-## Nvidia + Intel graphics
+## 2. Nvidia + Intel graphics
 
 * Get all availabe updates
 * Add the graphics drivers ppa
@@ -97,13 +97,21 @@ approximately the same as the monitor refresh rate.
 108434 frames in 5.0 seconds = 21686.387 FPS
 ```
 
-### Advantages of intel
+### 1.1 Advantages of intel
 * Super long battery life (8h)
 * No video tearing
 * Runs cool.
 
-### Advantages of nvidia
+### 1.2 Advantages of nvidia
 * Cuda!
 
-### Unsolved issues
+### 1.3 Unsolved issues
 * Horrible screen tearing when nvidia enabled. Most of the solutions ask you to add `TearFree=True` to xorg.conf, but that doesn't seem to help a lot.
+
+## 2. Power management
+
+Battery is massive (97Wh) so that's awesome. Additional things possible include installing tlp.
+
+## 3. Multi touch and gestures
+
+Check the excellent guide on [reddit](https://www.reddit.com/r/Dell/comments/646y0t/xps_9560_setting_up_multitouch_gestures_with/)
