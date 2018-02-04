@@ -1,5 +1,7 @@
 # Ubuntu 16.04.3
 
+Installing ubuntu 16.04.3 on Dell XPS 15-9560
+
 * 16GB RAM
 * 512GB SSD
 * Core i7-7700HQ
