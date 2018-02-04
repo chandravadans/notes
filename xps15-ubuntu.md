@@ -7,10 +7,20 @@ Installing ubuntu 16.04.3 on Dell XPS 15-9560
 * Core i7-7700HQ
 * Nvidia 1050, 4GB
 
+## Running the live usb
+
+* Burn iso image to pendrive (Rufus on Win, dd on another linux)
+* Boot, and if you get a problem about cpu#x being softblocked then at the grub command line (Try Ubuntu without installing -> 'o')
+append this to the line that starts with 'linux':
+
+```
+nouveau.modeset=0
+```
+
 ## Nvidia + Intel graphics
 
 * Get all availabe updates
-* Add graphics drivers ppa
+* Add the graphics drivers ppa
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
@@ -94,3 +104,6 @@ approximately the same as the monitor refresh rate.
 
 ### Advantages of nvidia
 * Cuda!
+
+### Unsolved issues
+* Horrible screen tearing when nvidia enabled. Most of the solutions ask you to add `TearFree=True` to xorg.conf, but that doesn't seem to help a lot.
