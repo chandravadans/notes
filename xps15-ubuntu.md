@@ -105,8 +105,40 @@ approximately the same as the monitor refresh rate.
 ### 1.2 Advantages of nvidia
 * Cuda!
 
-### 1.3 Unsolved issues
+### 1.3 Cuda
+* Download the cuda 9.0 repository from Nvidia's developer [site](https://developer.nvidia.com/cuda-90-download-archive). Cuda 9.0 is the latest that can run on 16.04 as of Feb '18, because 384.11 is the latest proprietary driver in the repositories.
+
+* After installing, do an update and install `cuda-toolkit-9.0`
+ * Do *not* install plain `cuda` or `cuda-9_0`, both of them uninstall the installed proprietary driver and install the latest available version.
+ 
+ * The files are installed at `/usr/local/cuda`, so try compiling the samples provided after copying them to somewhere writable, `/home/user` for example.
+ 
+ * Check cuda installation by running one of the simple examples, `deviceQuery`
+ 
+ Successful run:
+ ```
+ ./bin/x86_64/linux/release/deviceQuery Starting...
+
+ CUDA Device Query (Runtime API) version (CUDART static linking)
+
+Detected 1 CUDA Capable device(s)
+
+Device 0: 
+...
+...
+...
+  Compute Mode:
+     < Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) >
+
+deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 9.0, CUDA Runtime Version = 9.0, NumDevs = 1
+Result = PASS
+```
+
+* If you get an error saying the cuda driver version isn't sufficient for the cuda runtime, you most likely installed `cuda` or `cuda-9_0` and it overwrote `nvidia-384` with something else.
+
+### 1.4 Unsolved issues
 * Horrible screen tearing when nvidia enabled. Most of the solutions ask you to add `TearFree=True` to xorg.conf, but that doesn't seem to help a lot.
+ * This doesn't seem to be present in the latest driver `nvidia-390` but too bad the proprietary version isn't in the repos yet :(. You can, of course go the route of downloading the runfile from nvidia's site but I'd much rather wait for it to pop up in the repositories.
 
 ## 2. Power management
 
