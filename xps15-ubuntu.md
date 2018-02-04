@@ -19,6 +19,7 @@ sudo apt-get update
 GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_rev_override=5"
 
 ```
+* Run `sudo update-grub`.
 * Reboot, enjoy. Whenever you want to switch to nvidia, change the PRIME profile in the nvidia-settings app to nvidia.
 Log back in, and there it is!
 
