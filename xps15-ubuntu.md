@@ -23,7 +23,8 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi_rev_override=5"
 Log back in, and there it is!
 
 * Two ways to check what card is getting used:
-Install mesa-utils first. Then,
+
+Install `mesa-utils` first. Then,
 
 1. `glxinfo|grep string`
  
