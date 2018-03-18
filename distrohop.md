@@ -36,3 +36,6 @@
 ## Cons
 * Some manjaro community distro isos are not hybrid, fail to boot from usb when secureboot/uefi is enabled. 
 Tried both, dd and rufus.
+
+## Misc
+* Manjaro 17.1.6 Gnome's using Wayland, beware!
