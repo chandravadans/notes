@@ -1,4 +1,4 @@
-#Notes of a distrohopper
+# Notes of a distrohopper
 
 ## Ubuntu
 
